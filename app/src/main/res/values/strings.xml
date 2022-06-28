@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Slamet</string>
+    <string name="total_bayar">Total Pembayaran</string>
+    <string name="Bayar">Bayar</string>
+    <string name="tab_kartu_pengguna">Tab Kartu Pengguna</string>
+    <string name="topup">Topup</string>
+    <string name="image_des_back_arrow">back arrow</string>
+    <string name="daftar_harga">Daftar harga</string>
+    <string name="balance">Balance</string>
+    <string name="pilih_tipe_kartu">Pilih Tipe Kartu</string>
+    <string name="berhasil_direset">Berhasil Direset</string>
+    <string name="ok">ok</string>
+    <string name="save_success">Data Berhasil Disimpan</string>
+    <string name="tempelkan_kartu">Tempelkan Kartu!!</string>
+    <string name="search">Cari Berdasarkan Nama</string>
+    <string name="harap_tempelkan_kartu">Harap Tempelkan Kartu!</string>
+    <string name="failed_to_read_the_card">Failed to read the card</string>
+    <string name="unrecognized_card">Unrecognized card</string>
+</resources>

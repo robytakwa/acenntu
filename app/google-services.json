@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "940834813828",
+    "project_id": "londry-1693c",
+    "storage_bucket": "londry-1693c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940834813828:android:c8df426fa66707d2e98fd1",
+        "android_client_info": {
+          "package_name": "com.mitralaundry.xpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940834813828-lfqauma1l34kfek7134fs3jc60unsmhe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mitralaundry.xpro",
+            "certificate_hash": "2945b5f9dc82cac4af631859f1f3c67cb4c30ad7"
+          }
+        },
+        {
+          "client_id": "940834813828-kka9cgmkrt7f9jpru52jhe131jgfpd5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOAve9-PizWhVzSdpjRMdfts8mQ2g3lHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940834813828-kka9cgmkrt7f9jpru52jhe131jgfpd5e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

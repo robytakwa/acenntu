@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pulse">
+        <item>-Pilih-</item>
+        <item>HIGH</item>
+        <item>LOW</item>
+    </string-array>
+
+    <string-array name="pulse_duration">
+        <item>-Pilih-</item>
+        <item>ms</item>
+        <item>s</item>
+        <item>m</item>
+        <item>h</item>
+
+    </string-array>
+
+
+</resources>
