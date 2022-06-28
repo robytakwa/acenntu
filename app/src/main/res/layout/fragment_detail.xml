@@ -17,7 +17,7 @@
 
 
         <include
-            android:id="@+id/inc_detail_info"
+            android:id="@+id/ll_detail"
             layout="@layout/partial_details_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

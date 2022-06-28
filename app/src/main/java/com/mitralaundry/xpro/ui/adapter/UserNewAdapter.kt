@@ -16,7 +16,7 @@ class UserNewAdapter : RecyclerView.Adapter<UserNewAdapter.IViewHolder>() {
     private var models: MutableList<UserResponse> = ArrayList()
     var modelListData: MutableList<UserResponse> = models
     var context: Context? = null
-
+    private var onItemClickListener: OnItemClickListener? =null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = IViewHolder (
         ItemListUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -46,8 +46,15 @@ class UserNewAdapter : RecyclerView.Adapter<UserNewAdapter.IViewHolder>() {
                 .load(model.avatarUrl)
                 .into(itemBinding.ivUser)
 
-
+            itemView.setOnClickListener { onItemClickListener!!.onItemClick(position) }
         }
     }
 
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+    fun SetOnItemClickListener(onItemClickListener: OnItemClickListener?) {
+        this.onItemClickListener = onItemClickListener
+    }
 }
