@@ -1,4 +1,4 @@
-package com.mitralaundry.xpro.ui.screen
+package com.mitralaundry.xpro.ui.screen.activity
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

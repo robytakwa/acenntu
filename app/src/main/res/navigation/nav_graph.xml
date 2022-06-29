@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.mitralaundry.xpro.ui.screen.UserFragment"
+        android:name="com.mitralaundry.xpro.ui.screen.fragment.UserFragment"
         tools:layout="@layout/fragment_user"
         android:label="fragment_user">
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.mitralaundry.xpro.ui.screen.DetailFragment"
+        android:name="com.mitralaundry.xpro.ui.screen.fragment.DetailFragment"
         android:label="DetailFragment"
         tools:layout="@layout/fragment_detail"
         >

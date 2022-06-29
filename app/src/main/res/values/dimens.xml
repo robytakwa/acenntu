@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="ts_title">17sp</dimen>
-    <dimen name="ts_subtitle">15sp</dimen>
     <dimen name="ts_body">13sp</dimen>
-    <dimen name="ts_light">11sp</dimen>
 
 
 </resources>

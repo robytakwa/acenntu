@@ -1,5 +1,5 @@
 
-package com.mitralaundry.xpro.ui.screen
+package com.mitralaundry.xpro.ui.screen.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,6 +15,7 @@ import com.mitralaundry.xpro.R
 import com.mitralaundry.xpro.data.model.response.UserResponse
 import com.mitralaundry.xpro.databinding.FragmentUserBinding
 import com.mitralaundry.xpro.ui.adapter.UserNewAdapter
+import com.mitralaundry.xpro.ui.screen.activity.ViewModelMain
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

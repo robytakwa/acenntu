@@ -1,10 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="total_bayar">Total Pembayaran</string>
-    <string name="Bayar">Bayar</string>
-    <string name="tab_kartu_pengguna">Tab Kartu Pengguna</string>
-    <string name="topup">Topup</string>
-    <string name="image_des_back_arrow">back arrow</string>
-    <string name="daftar_harga">Daftar harga</string>
-    <string name="balance">Balance</string>
-</resources>
+<resources></resources>

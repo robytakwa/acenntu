@@ -2,46 +2,10 @@
 
     <!-- Base application theme. -->
 
-    <style name="dropSpinner" parent="Widget.AppCompat.TextView.SpinnerItem">
-        <item name="android:textSize">@dimen/ts_light</item>
-        <item name="android:fontFamily" tools:ignore="NewApi">@font/segoe_ui</item>
-    </style>
-
     <style name="AppSearchView" parent="Widget.AppCompat.SearchView" >
         <item name="android:textSize">@dimen/ts_body</item>
         <item name="android:fontFamily" tools:ignore="NewApi">@font/segoe_ui</item>
 
-    </style>
-
-    <style name="regular_body">
-        <item name="android:textSize">@dimen/ts_body</item>
-        <item name="android:fontFamily" tools:ignore="NewApi">@font/segoe_ui</item>
-        <item name="android:typeface">normal</item>
-    </style>
-
-    <style name="regular_subtitle">
-        <item name="android:textSize">@dimen/ts_subtitle</item>
-        <item name="android:fontFamily" tools:ignore="NewApi">@font/segoe_ui</item>
-    </style>
-
-    <style name="regular_title">
-        <item name="android:textSize">@dimen/ts_title</item>
-        <item name="android:fontFamily" tools:ignore="NewApi">@font/segoe_ui</item>
-    </style>
-
-    <style name="semibold_body">
-        <item name="android:textSize">@dimen/ts_body</item>
-        <item name="android:fontFamily" tools:ignore="NewApi">@font/segoe_ui_semibold</item>
-    </style>
-
-    <style name="semibold_subtitle">
-        <item name="android:textSize">@dimen/ts_subtitle</item>
-        <item name="android:fontFamily" tools:ignore="NewApi">@font/segoe_ui_semibold</item>
-    </style>
-
-    <style name="semibold_title">
-        <item name="android:textSize">@dimen/ts_title</item>
-        <item name="android:fontFamily" tools:ignore="NewApi">@font/segoe_ui_semibold</item>
     </style>
 
     <style name="bold_title">

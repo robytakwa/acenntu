@@ -1,4 +1,4 @@
-package com.mitralaundry.xpro.ui.screen
+package com.mitralaundry.xpro.ui.screen.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.mitralaundry.xpro.data.model.response.UserResponse
 import com.mitralaundry.xpro.databinding.FragmentDetailBinding
+import com.mitralaundry.xpro.ui.screen.activity.ViewModelMain
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
