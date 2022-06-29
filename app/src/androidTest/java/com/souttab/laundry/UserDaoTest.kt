@@ -2,9 +2,9 @@ package com.souttab.laundry
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.filters.SmallTest
-import com.mitralaundry.xpro.data.database.SlametDatabase
-import com.mitralaundry.xpro.data.database.dao.OutletDao
-import com.mitralaundry.xpro.data.database.model.Outlet
+import com.accenture.roby.data.database.SlametDatabase
+import com.accenture.roby.data.database.dao.OutletDao
+import com.accenture.roby.data.database.model.Outlet
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import org.junit.*
@@ -37,12 +37,5 @@ class UserDaoTest {
         database.close()
     }
 
-    @Test
-    suspend fun testTestInsertUser() {
-        val outlet = Outlet(1, "MDI-001", "OUT-001", "Joko Laundry")
 
-        outletDao.insertOutlet(outlet)
-        val allOutlet = outletDao.getAllOutlet().count()
-        Assert.assertEquals(1, allOutlet)
-    }
 }

@@ -2,7 +2,7 @@ package com.souttab.laundry
 
 import android.content.Context
 import androidx.room.Room
-import com.mitralaundry.xpro.data.database.SlametDatabase
+import com.accenture.roby.data.database.SlametDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
