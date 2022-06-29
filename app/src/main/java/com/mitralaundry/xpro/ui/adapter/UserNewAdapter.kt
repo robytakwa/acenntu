@@ -7,12 +7,8 @@ import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.mitralaundry.xpro.R
-import com.mitralaundry.xpro.data.model.response.DataUser
 import com.mitralaundry.xpro.data.model.response.UserResponse
-import com.mitralaundry.xpro.databinding.ItemListAccountBinding
 import com.mitralaundry.xpro.databinding.ItemListUserBinding
-import kotlinx.coroutines.withContext
 
 class UserNewAdapter : RecyclerView.Adapter<UserNewAdapter.IViewHolder>(), Filterable {
     private var models: MutableList<UserResponse> = ArrayList()

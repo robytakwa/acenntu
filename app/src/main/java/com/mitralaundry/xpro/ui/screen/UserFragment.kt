@@ -14,16 +14,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mitralaundry.xpro.R
 import com.mitralaundry.xpro.data.model.response.UserResponse
 import com.mitralaundry.xpro.databinding.FragmentUserBinding
-import com.mitralaundry.xpro.ui.adapter.UserAdapter
 import com.mitralaundry.xpro.ui.adapter.UserNewAdapter
-import com.mitralaundry.xpro.ui.screen.merchant.kelolakasir.ViewModelUser
-import com.spe.spectrum.helper.withArgs
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class UserFragment : Fragment() {
     private lateinit var mAdapter: UserNewAdapter
-    private val viewModel: ViewModelUser by viewModels()
+    private val viewModel: ViewModelMain by viewModels()
     private lateinit var binding: FragmentUserBinding
     private lateinit var userList: List<UserResponse>
 
@@ -47,14 +44,6 @@ class UserFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val navController = findNavController(view)
-
-//            navController.navigate(R.id.action_userFragment_to_detailFragment)
-//            //parsing data to detail fragment using bundle extra user data from this fragment user list adapter item click listener onClick method in adapter class UserNewAdapter class
-//            val bundle = Bundle()
-//            bundle.putParcelable(EXTRA_USER, userList[0])
-//            navController.navigate(R.id.action_userFragment_to_detailFragment, bundle)
-
             mAdapter.SetOnItemClickListener(object : UserNewAdapter.OnItemClickListener {
                 override fun onItemClick(position: Int) {
                     actionToDetail(view,userList,position)
