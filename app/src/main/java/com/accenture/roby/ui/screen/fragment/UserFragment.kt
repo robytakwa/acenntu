@@ -31,8 +31,7 @@ class UserFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        binding = FragmentUserBinding.inflate(inflater, container, false)
+        binding = FragmentUserBinding.inflate(inflater)
         mAdapter = UserAdapter()
         initRecycler(binding.rvListAccount)
         binding.rvListAccount.adapter = mAdapter

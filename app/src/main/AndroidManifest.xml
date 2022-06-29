@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laundry">
         <activity
-            android:name="com.accenture.roby.ui.screen.MainActivity"
+            android:name="com.accenture.roby.ui.screen.activity.UserActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Laundry.NoActionBar"

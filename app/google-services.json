@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:940834813828:android:c8df426fa66707d2e98fd1",
         "android_client_info": {
-          "package_name": "com.mitralaundry.xpro"
+          "package_name": "com.accenture.roby"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "940834813828-lfqauma1l34kfek7134fs3jc60unsmhe.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mitralaundry.xpro",
+            "package_name": "com.accenture.roby",
             "certificate_hash": "2945b5f9dc82cac4af631859f1f3c67cb4c30ad7"
           }
         },
