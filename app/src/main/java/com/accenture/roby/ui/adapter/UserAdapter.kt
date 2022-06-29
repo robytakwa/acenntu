@@ -8,7 +8,7 @@ import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.accenture.roby.data.model.response.UserResponse
-import com.mitralaundry.xpro.databinding.ItemListUserBinding
+import com.accenture.roby.databinding.ItemListUserBinding
 
 class UserAdapter : RecyclerView.Adapter<UserAdapter.IViewHolder>(), Filterable {
     private var models: MutableList<UserResponse> = ArrayList()

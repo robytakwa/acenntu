@@ -10,6 +10,10 @@ class UserRepository @Inject constructor(private val session: DataStoreManager) 
         return api.getUser()
     }
 
+    suspend fun getDetailUser(username : String): UserDetailModel {
+        return api.detailUser(username)
+    }
+
 //    suspend fun getListUserSearch(name : String): BaseResponse<ResultData<DataUser>> {
 //        val user = session.fetchInitialPreferences()
 //        return api.getListUserSearch(

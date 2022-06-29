@@ -8,7 +8,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.Window
 import android.view.WindowManager
-import com.mitralaundry.xpro.R
+import com.accenture.roby.R
 
 object CustomLoading {
     var dialog: Dialog? = null

@@ -18,6 +18,9 @@ class ViewModelMain @Inject constructor(
     private val _dataUser = MutableLiveData<List<UserResponse>>()
     val dataUser = _dataUser
 
+    private val _dataDetail = MutableLiveData<UserDetailModel>()
+    val dataDetail = _dataDetail
+
     fun getListUser() {
         viewModelScope.launch {
             try {
@@ -26,6 +29,22 @@ class ViewModelMain @Inject constructor(
                 val newResult =
                     GsonUtil.fromJson<List<UserResponse>>(Gson().toJson(result))
                 _dataUser.value = newResult
+
+            } catch (throwable: Throwable) {
+
+                println(throwable.message)
+            }
+        }
+    }
+
+    fun getDetailUser(username : String) {
+        viewModelScope.launch {
+            try {
+                val result = repository.getDetailUser(username)
+                println(result)
+                val newResult =
+                    GsonUtil.fromJson<UserDetailModel>(Gson().toJson(result))
+                _dataDetail.value = newResult
 
             } catch (throwable: Throwable) {
 

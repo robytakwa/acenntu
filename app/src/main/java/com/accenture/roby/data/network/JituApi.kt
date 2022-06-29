@@ -8,4 +8,7 @@ interface JituApi {
     @GET("users")
     suspend fun getUser(): List <UserResponse>
 
+    @GET("users/{username}")
+    suspend fun detailUser(@Path("username") username: String): UserDetailModel
+
 }

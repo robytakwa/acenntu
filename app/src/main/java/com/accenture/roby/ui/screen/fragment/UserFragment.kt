@@ -1,6 +1,4 @@
-
 package com.accenture.roby.ui.screen.fragment
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,11 +9,11 @@ import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.accenture.roby.R
 import com.accenture.roby.data.model.response.UserResponse
+import com.accenture.roby.databinding.FragmentUserBinding
 import com.accenture.roby.ui.adapter.UserAdapter
 import com.accenture.roby.ui.screen.activity.ViewModelMain
-import com.mitralaundry.xpro.R
-import com.mitralaundry.xpro.databinding.FragmentUserBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -33,6 +31,7 @@ class UserFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         binding = FragmentUserBinding.inflate(inflater, container, false)
         mAdapter = UserAdapter()
         initRecycler(binding.rvListAccount)
@@ -45,15 +44,7 @@ class UserFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val navController = findNavController(view)
-
-//            navController.navigate(R.id.action_userFragment_to_detailFragment)
-//            //parsing data to detail fragment using bundle extra user data from this fragment user list adapter item click listener onClick method in adapter class UserNewAdapter class
-//            val bundle = Bundle()
-//            bundle.putParcelable(EXTRA_USER, userList[0])
-//            navController.navigate(R.id.action_userFragment_to_detailFragment, bundle)
-
-            mAdapter.SetOnItemClickListener(object : UserAdapter.OnItemClickListener {
+        mAdapter.SetOnItemClickListener(object : UserAdapter.OnItemClickListener {
                 override fun onItemClick(position: Int) {
                     actionToDetail(view,userList,position)
                 }
