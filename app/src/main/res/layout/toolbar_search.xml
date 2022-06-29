@@ -3,7 +3,7 @@
     android:id="@+id/rlToolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/purple_500">
+    android:background="@color/background_menu">
 
     <LinearLayout
         android:id="@+id/ll_toolbar"
@@ -14,7 +14,7 @@
 
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_account_list"
+            android:id="@+id/search_user"
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:background="@drawable/ic_border_blue_light_r8"
@@ -26,7 +26,7 @@
             app:closeIcon="@drawable/ic_close_round"
             app:iconifiedByDefault="false"
             app:queryBackground="@android:color/transparent"
-            app:queryHint="Cari nama lengkap"
+            app:queryHint="@string/aa"
             app:searchIcon="@drawable/ic_search" />
 
     </LinearLayout>

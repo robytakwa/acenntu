@@ -3,6 +3,8 @@ package com.mitralaundry.xpro.ui.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mitralaundry.xpro.R
@@ -12,7 +14,7 @@ import com.mitralaundry.xpro.databinding.ItemListAccountBinding
 import com.mitralaundry.xpro.databinding.ItemListUserBinding
 import kotlinx.coroutines.withContext
 
-class UserNewAdapter : RecyclerView.Adapter<UserNewAdapter.IViewHolder>() {
+class UserNewAdapter : RecyclerView.Adapter<UserNewAdapter.IViewHolder>(), Filterable {
     private var models: MutableList<UserResponse> = ArrayList()
     var modelListData: MutableList<UserResponse> = models
     var context: Context? = null
@@ -37,6 +39,11 @@ class UserNewAdapter : RecyclerView.Adapter<UserNewAdapter.IViewHolder>() {
 
     }
 
+    fun clearData() {
+        models.clear()
+        notifyDataSetChanged()
+
+    }
     inner class IViewHolder(private val itemBinding: ItemListUserBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(model: UserResponse, position: Int,  context: Context) {
@@ -56,5 +63,32 @@ class UserNewAdapter : RecyclerView.Adapter<UserNewAdapter.IViewHolder>() {
 
     fun SetOnItemClickListener(onItemClickListener: OnItemClickListener?) {
         this.onItemClickListener = onItemClickListener
+    }
+
+    override fun getFilter(): Filter {
+        return object : Filter() {
+            override fun performFiltering(constraint: CharSequence?): FilterResults {
+                val filteredList: MutableList<UserResponse> = ArrayList()
+                if (constraint == null || constraint.isEmpty()) {
+                    filteredList.addAll(modelListData)
+                } else {
+                    val filterPattern = constraint.toString().toLowerCase().trim { it <= ' ' }
+                    for (item in modelListData) {
+                        if (item.login!!.toLowerCase().contains(filterPattern)) {
+                            filteredList.add(item)
+                        }
+                    }
+                }
+                val results = FilterResults()
+                results.values = filteredList
+                return results
+            }
+
+            override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                modelListData.clear()
+                modelListData.addAll(results?.values as List<UserResponse>)
+                notifyDataSetChanged()
+            }
+        }
     }
 }

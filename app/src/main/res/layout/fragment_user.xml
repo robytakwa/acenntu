@@ -7,7 +7,6 @@
         tools:context=".ui.screen.UserFragment"
         >
 
-
         <LinearLayout
             android:id="@+id/rl_user"
             android:layout_width="match_parent"

@@ -16,4 +16,5 @@
     <string name="harap_tempelkan_kartu">Harap Tempelkan Kartu!</string>
     <string name="failed_to_read_the_card">Failed to read the card</string>
     <string name="unrecognized_card">Unrecognized card</string>
+    <string name="aa">Search Gihub users</string>
 </resources>

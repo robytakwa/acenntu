@@ -22,7 +22,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class UserFragment : Fragment() {
-
     private lateinit var mAdapter: UserNewAdapter
     private val viewModel: ViewModelUser by viewModels()
     private lateinit var binding: FragmentUserBinding
@@ -42,6 +41,7 @@ class UserFragment : Fragment() {
         binding.rvListAccount.adapter = mAdapter
         viewModel.getListUser()
         initDataObserve()
+        initSearch()
         return binding.root
     }
 
@@ -58,10 +58,30 @@ class UserFragment : Fragment() {
             mAdapter.SetOnItemClickListener(object : UserNewAdapter.OnItemClickListener {
                 override fun onItemClick(position: Int) {
                     actionToDetail(view,userList,position)
-
                 }
 
             })
+
+    }
+
+    private fun initSearch() {
+        binding.toolbar.searchUser.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                if (newText.isEmpty()) {
+                   mAdapter.clearData()
+                    viewModel.getListUser()
+                } else {
+                    mAdapter.filter.filter(newText)
+                }
+                return false
+            }
+        })
+
 
     }
 
@@ -82,7 +102,6 @@ class UserFragment : Fragment() {
 
         }
     }
-
 
     private fun actionToDetail(view: View, user: List<UserResponse>, position: Int) {
         val bundle = Bundle()
