@@ -1,13 +1,17 @@
 package com.mitralaundry.xpro.data.repository
 
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.liveData
 import com.mitralaundry.xpro.data.model.UserDetailModel
 import com.mitralaundry.xpro.data.model.response.*
+import com.mitralaundry.xpro.data.network.JituApi
 import com.mitralaundry.xpro.data.network.api
 import com.mitralaundry.xpro.di.DataStoreManager
 import javax.inject.Inject
 
-class UserRepository @Inject constructor(private val session: DataStoreManager) {
-
+class UserRepository @Inject constructor(private val session : DataStoreManager) {
+//private val api = JituApi.create()
     suspend fun getUser(): List<UserResponse> {
         return api.getUser()
     }
@@ -16,13 +20,8 @@ class UserRepository @Inject constructor(private val session: DataStoreManager) 
         return api.detailUser(username)
     }
 
-//    suspend fun getListUserSearch(name : String): BaseResponse<ResultData<DataUser>> {
-//        val user = session.fetchInitialPreferences()
-//        return api.getListUserSearch(
-//            token = "Bearer ${user.token}",
-//            name = name
-//
-//        )
-//    }
-
+    fun getPagingUser() = Pager(
+        config = PagingConfig(pageSize = 20, maxSize = 100),
+        pagingSourceFactory = { UserPagingResource(api) }
+    ).liveData
 }

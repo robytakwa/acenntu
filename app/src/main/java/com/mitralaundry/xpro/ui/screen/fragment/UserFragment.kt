@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mitralaundry.xpro.R
 import com.mitralaundry.xpro.data.model.response.UserResponse
 import com.mitralaundry.xpro.databinding.FragmentUserBinding
+import com.mitralaundry.xpro.helper.CustomLoading
 import com.mitralaundry.xpro.ui.adapter.UserNewAdapter
 import com.mitralaundry.xpro.ui.screen.activity.ViewModelMain
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,6 +39,7 @@ class UserFragment : Fragment() {
         initRecycler(binding.rvListAccount)
         binding.rvListAccount.adapter = mAdapter
         viewModel.getListUser()
+        CustomLoading.showLoading(requireActivity())
         initDataObserve()
         initSearch()
         return binding.root
@@ -87,9 +89,14 @@ class UserFragment : Fragment() {
 
     private fun initDataObserve() {
         viewModel.dataUser.observe(viewLifecycleOwner) {
+         CustomLoading.hideLoading()
             userList = it
             mAdapter.setData(it, context!!)
 
+        }
+
+        viewModel.list.observe(viewLifecycleOwner) {
+            CustomLoading.hideLoading()
         }
     }
 

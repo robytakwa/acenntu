@@ -3,6 +3,7 @@ package com.mitralaundry.xpro.ui.screen.activity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.cachedIn
 import com.google.gson.Gson
 import com.mitralaundry.xpro.data.model.UserDetailModel
 import com.mitralaundry.xpro.data.model.response.*
@@ -21,6 +22,8 @@ class ViewModelMain @Inject constructor(
 
     private val _dataDetail = MutableLiveData<UserDetailModel>()
     val dataDetail = _dataDetail
+
+    val list = repository.getPagingUser().cachedIn(viewModelScope)
 
     fun getListUser() {
         viewModelScope.launch {
